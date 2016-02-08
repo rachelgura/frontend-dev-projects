@@ -1,0 +1,29 @@
+*{
+   -webkit-box-sizing: border-box
+   -moz-box-sizing: border-box
+   -ms-box-sizing: border-box
+   box-sizing: border-box;	
+}
+.title {
+	 margin: 70px 0px 40px 40px;
+	 background-color: #33BEBE;
+	 font-family: inherit;
+	 color: white;
+
+}
+
+.image {
+	margin: 0px 10px 0px 40px;
+	max-width: 460px;
+	
+}
+
+.app {
+	display: flex;
+}
+
+.description {
+    max-width: 705px;
+    color: #7C8B88
+
+}
