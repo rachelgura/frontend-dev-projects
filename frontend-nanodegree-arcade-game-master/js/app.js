@@ -177,7 +177,9 @@ Player.prototype.render = function () {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 
     // Check for collisions
-    checkCollisions(player);
+    Player.prototype.checkCollisions = function () {
+  //Statements
+};
 
     // Check for a valid crossing
     checkCrossings(player);

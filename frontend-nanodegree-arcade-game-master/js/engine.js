@@ -189,7 +189,7 @@ var Engine = (function(global) {
         ctx.fillStyle = 'green';
         ctx.font = 'bold 18pt Arial';
         ctx.textAlign = 'center';
-        ctx.fillText('MACCOOL FROGGER', 352, 21);
+        ctx.fillText('FROGGER', 352, 21);
 
         //Sprite selection text
         ctx.fillStyle = 'green';
