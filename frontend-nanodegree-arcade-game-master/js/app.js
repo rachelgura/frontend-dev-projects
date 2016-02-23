@@ -199,7 +199,7 @@ Player.prototype.handleInput = function (keys) {
 // Checks whether the player sprite has overlapped with and enemy
 // sprite. If it does it resets the player. If it does not score is
 // added.
-function checkCollisions(player) {
+ Player.prototype.checkCollisions = function() {
     //Get the current co-ords for the player sprite
     var pX = player.x, pY = player.y, eX = [], eY = [], i =0, eObj = [];
 
@@ -272,7 +272,7 @@ function checkCollisions(player) {
 }
 
 // Checks for a valid crossing when the player has reached either safe zone.
-function checkCrossings(player) {
+Player.prototype.checkCrossings = function() {
     
     // Only mark a good crossing if the player has reached either safe zone.
     // resetCrossed makes sure that crossings aren't counted when just sitting
