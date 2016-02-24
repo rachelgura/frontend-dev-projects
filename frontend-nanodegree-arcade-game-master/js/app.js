@@ -201,7 +201,7 @@ Player.prototype.handleInput = function (keys) {
 // added.
  Player.prototype.checkCollisions = function() {
     //Get the current co-ords for the player sprite
-    var pX = player.x, pY = player.y, eX = [], eY = [], i =0, eObj = [];
+    var pX = this.x, pY = this.y, eX = [], eY = [], i =0, eObj = [];
 
     //Now get the co-ords for all the enemies
     for (i=0; i <= eQuantity-1; i = i + 1) {
@@ -279,7 +279,7 @@ Player.prototype.checkCrossings = function() {
     // in the zone.
     switch (true) {
         // Top zone
-        case (player.y < 10):
+        case (this.y < 10):
             if (resetCrossed === 0) {
                 player.crossings = player.crossings + 1;
                 resetCrossed = 1;
