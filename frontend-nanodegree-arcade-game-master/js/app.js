@@ -177,10 +177,10 @@ Player.prototype.render = function () {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 
     // Check for collisions
-    this.checkCollisions(player);
+    this.checkCollisions();
 
     // Check for a valid crossing
-    this.checkCrossings(player);
+    this.checkCrossings();
 };
 
 // Receives the player keyboard inputs
@@ -445,7 +445,7 @@ function gameStartup() {
 
     var i = 0;
     allEnemies = [];
-    player = new Player;
+    player = new Player();
     overlap = false;
     player.lives = tLives;
     player.crossings = 0;
@@ -511,7 +511,7 @@ function checkEnemyStartingPositions() {
                 if (eY[i] === eY[j]) {
                     // Simply reset the
                     allEnemies[i]['x'] = allEnemies[i]['x'] + 101;   
-                    }
+             }
             } // End if !i==j
         }  // End for j loop
     } // End for i loop
