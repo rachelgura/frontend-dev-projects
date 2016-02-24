@@ -162,7 +162,7 @@ Player.prototype.update = function () {
             if (this.y > 31 && this.y < 322) {
                  this.score = this.score + (moveScore * (this.crossings + 1));
              }
-        break;
+        break; 2
     }
 
     // Reset the keypress so the update doesn't keep moving the player
@@ -177,10 +177,10 @@ Player.prototype.render = function () {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 
     // Check for collisions
-    checkCollisions(player);
+    this.checkCollisions(player);
 
     // Check for a valid crossing
-    checkCrossings(player);
+    this.checkCrossings(player);
 };
 
 // Receives the player keyboard inputs
