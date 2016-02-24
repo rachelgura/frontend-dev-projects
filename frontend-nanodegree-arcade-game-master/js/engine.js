@@ -187,7 +187,7 @@ var Engine = (function(global) {
         ctx.fillStyle = 'green';
         ctx.font = 'bold 18pt Arial';
         ctx.textAlign = 'center';
-        ctx.fillText('FROGGER', 352, 21);
+        ctx.fillText(' PRINCESS FROGGER', 352, 21);
 
         //Sprite selection text
         ctx.fillStyle = 'green';
@@ -244,7 +244,7 @@ var Engine = (function(global) {
         ctx.textAlign = 'center';
 
         // Title, score and replay
-        ctx.fillText('MACCOOL FROGGER', 352, 51);
+        ctx.fillText('PRINCESS FROGGER', 352, 51);
         ctx.fillText('FINAL SCORE: ', 303, 201);
         ctx.fillText(player.score, 503, 201);
         ctx.fillText('THANK YOU FOR PLAYING', 353, 401);
