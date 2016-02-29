@@ -1,4 +1,4 @@
 A single paged application featuring a map of Dallas and my favorite top 10 locations.
 
-Access the app by downloading the file or opening the link below:
+Access the app by opening the index.html file.
 
