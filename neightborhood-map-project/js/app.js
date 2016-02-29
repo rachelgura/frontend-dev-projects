@@ -1,64 +1,48 @@
 /*Array of locations*/
 var favoritePlaces = [
   {
-    name: 'Cityplace/Uptown (DART station)',
-    lat: 32.805600, 
-    lng: -96.793870,
-    text: 'The only in Dallas where you can be 120 ft underground, ride a slanted elevator, and pretend you are in New York City or another major city with underground subways'
-  },
-  {
-    name: 'McKinney Avenue Transit Authority',
-    lat: 32.805854,
-    lng: -96.793808,
-    text: 'Catch a ride here on a historic trolley through uptown to downtown Dallas.'
-  },
-  {
     name: 'Klyde Warren Park',
     lat: 32.789415, 
     lng: -96.801788,
-    text: 'A small park on top of a highway in downtown Dallas with lots of free activities and food trucks to choose from.'
+    text: 'Right across from the Art Museum, home to concerts, food trucks and a fun dog park.'
   },
+  
+   
   {
-    name: 'Morton H. Meyerson Symphony Center',
-    lat: 32.789784,
-    lng: -96.798599,
-    text: 'A wonderful place for great music and the best bread pudding.'
-  },
-  {
-    name: 'Perot Museum of Nature and Science',
+   name: 'Perot Museum of Nature and Science',
     lat: 32.786891, 
     lng: -96.806698,
-    text: 'Great place for kids to interact with exhibits showcasing human body, robotics, dinosaurs, earth, space, and birds. There is also a play place for young kids.'
+    text: 'An interactive Museum that anyone could spend hours in. Fun for adults and children.'
   },
   {
     name: 'Fountain Place',
     lat: 32.784423,
     lng: -96.802311,
-    text: 'My favorite building in downtown Dallas. It is surrounded by fountains and trees, which is as calming as it is beautiful.'
+    text: 'A truely serene place in the middle of the bustle of downtown.'
   },
   {
     name: 'Fair Park',
     lat: 32.781592, 
     lng: -96.761702,
-    text: 'Come here for the Texas State Fair, ride the Texas Star Ferris Wheel (tallest in the USA), and eat fun fried foods like funnel cakes.'
+    text: 'Home of the state fair and concerts.'
   },
   {
     name: 'Thanks-Giving Square',
     lat: 32.782668,
     lng: -96.798472,
-    text: 'Visit the chapel to see beautiful spiral stained-glass.'
+    text: 'Known for the amazing stained glass.'
   },
   {
     name: 'Reunion Tower',
     lat: 32.775636, 
     lng: -96.808974,
-    text: 'Eat here - the floor makes a full revolution each hour. You will get a full 360 view of Dallas.'
+    text: 'Iconic and strange. A full 360 view of Dallas.'
   },
   {
     name: 'Dallas Museum of Art',
     lat: 32.787642,
     lng: -96.800789,
-    text: 'Free art museum with frequent Friday and Thursday night concerts and events.'
+    text: 'Fantastic free art museum located in Downtown Dallas. Live jazz on Thursday and Fridays!'
   }
 ];
 
