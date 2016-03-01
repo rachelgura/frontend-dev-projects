@@ -125,7 +125,7 @@ var Place = function(name, lat, lng, text) {
         var articleSnippet = wikiArticlesSnippet[i];
         var url = 'http://en.wikipedia.org/wiki/' + articleName;
         this.infowindow.content += '<h6>Wikipedia:</h6>' + '<h6><a href="' + url + '">' + articleName + '</a></h6>' + '<p>' + articleSnippet + '</p>';
-      };
+      }
 
       //Cancel error response.
       clearTimeout(wikiRequestTimeout);
