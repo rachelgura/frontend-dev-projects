@@ -112,7 +112,7 @@ var Place = function(name, lat, lng, text) {
    * @params {string} url - Wikipedia API URL 
    */
   $.ajax({
-    dataType: "json",
+    dataType: "jsonp",
     url: this.wikiAPI,
     success: function(response) {
       //if fetch is successful, create variables to store response
