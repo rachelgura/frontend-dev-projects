@@ -10,7 +10,7 @@
 var allFeeds = [
     {
         name: 'Udacity Blog',
-        url: 'http://blog.udacity.com/feed'
+        url: 'http://blog.udacity.com/feeds/posts/default?alt=rss'
     }, {
         name: 'CSS Tricks',
         url: 'http://css-tricks.com/feed'
@@ -22,6 +22,8 @@ var allFeeds = [
         url: 'http://feeds.feedburner.com/udacity-linear-digressions'
     }
 ];
+
+var sortAscending = true;
 
 /* This function starts up our application. The Google Feed
  * Reader API is loaded asynchonously and will then call this
@@ -40,48 +42,59 @@ function init() {
  * This function all supports a callback as the second parameter
  * which will be called after everything has run successfully.
  */
- function loadFeed(id, cb) {
-     var feedUrl = allFeeds[id].url,
-         feedName = allFeeds[id].name;
+function loadFeed(id, cb) {
+    var feedUrl = allFeeds[id].url,
+        feedName = allFeeds[id].name,
+        feed = new google.feeds.Feed(feedUrl);
 
-     $.ajax({
-       type: "POST",
-       url: 'https://rsstojson.udacity.com/parseFeed',
-       data: JSON.stringify({url: feedUrl}),
-       contentType:"application/json",
-       success: function (result, status){
+    /* Load the feed using the Google Feed Reader API.
+     * Once the feed has been loaded, the callback function
+     * is executed.
+     */
+    feed.load(function(result) {
+        if (!result.error) {
+            /* If loading the feed did not result in an error,
+             * get started making the DOM manipulations required
+             * to display the feed entries on screen.
+             */
+            var container = $('.feed'),
+                title = $('.header-title'),
+                entries = result.feed.entries,
+                entriesLen = entries.length,
+                entryTemplate = Handlebars.compile($('.tpl-entry').html());
 
-                 var container = $('.feed'),
-                     title = $('.header-title'),
-                     entries = result.feed.entries,
-                     entriesLen = entries.length,
-                     entryTemplate = Handlebars.compile($('.tpl-entry').html());
+            title.html(feedName);   // Set the header text
+            container.empty();      // Empty out all previous entries
 
-                 title.html(feedName);   // Set the header text
-                 container.empty();      // Empty out all previous entries
+            // Sort by publishedDate
+            //entries.sort(function(entry1, entry2) {
+            //    return Date.parse(entry2.publishedDate) - Date.parse(entry1.publishedDate);
+            //});
 
-                 /* Loop through the entries we just loaded via the Google
-                  * Feed Reader API. We'll then parse that entry against the
-                  * entryTemplate (created above using Handlebars) and append
-                  * the resulting HTML to the list of entries on the page.
-                  */
-                 entries.forEach(function(entry) {
-                     container.append(entryTemplate(entry));
-                 });
+            // Sort by title
+            entries.sort(function(entry1, entry2) {
+                if (sortAscending) {
+                    return entry1.title > entry2.title;
+                } else {
+                    return entry1.title < entry2.title;
+                }
+            });
 
-                 if (cb) {
-                     cb();
-                 }
-               },
-       error: function (result, status, err){
-                 //run only the callback without attempting to parse result due to error
-                 if (cb) {
-                     cb();
-                 }
-               },
-       dataType: "json"
-     });
- }
+            /* Loop through the entries we just loaded via the Google
+             * Feed Reader API. We'll then parse that entry against the
+             * entryTemplate (created above using Handlebars) and append
+             * the resulting HTML to the list of entries on the page.
+             */
+            entries.forEach(function(entry) {
+                container.append(entryTemplate(entry));
+            });
+        }
+
+        if (cb) {
+            cb();
+        }
+    });
+}
 
 /* Google API: Loads the Feed Reader API and defines what function
  * to call when the Feed Reader API is done loading.
@@ -98,7 +111,9 @@ $(function() {
         feedList = $('.feed-list'),
         feedItemTemplate = Handlebars.compile($('.tpl-feed-list-item').html()),
         feedId = 0,
-        menuIcon = $('.menu-icon-link');
+        menuIcon = $('.menu-icon-link'),
+        currentFeed = 0,
+        headerTitle = $('.header-title');
 
     /* Loop through all of our feeds, assigning an id property to
      * each of the feeds based upon its index within the array.
@@ -121,7 +136,8 @@ $(function() {
         var item = $(this);
 
         $('body').addClass('menu-hidden');
-        loadFeed(item.data('id'));
+        currentFeed = item.data('id');
+        loadFeed(currentFeed);
         return false;
     });
 
@@ -131,4 +147,15 @@ $(function() {
     menuIcon.on('click', function() {
         $('body').toggleClass('menu-hidden');
     });
+
+    /* When the Header Title for the feed is clicked on,
+     * we want to toggle the sorting of the feeds by title
+     */
+    headerTitle.on('click', function() {
+        // Toggle sorting
+        sortAscending = !sortAscending;
+        // Reload current feed
+        loadFeed(currentFeed);
+    });
+
 }());

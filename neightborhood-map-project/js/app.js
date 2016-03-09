@@ -46,16 +46,30 @@ var favoritePlaces = [
   }
 ];
 
-/*Set up Google map*/
-var dallas = new google.maps.LatLng(32.791545, -96.786556);
-var map = new google.maps.Map($('#map')[0], {
-  center: dallas,
-  zoom: 13,
-  mapTypeControl: false,
-  panControl: false,
-  streetViewControl: false,
-  zoomControl: false
-}); 
+/* Declare globals variables
+ * to be defined within googleSuccess function
+ */
+var dallas,
+    map;
+
+/* Google API success function:
+ * Define Google variables and apply
+ * Knockout bindings.
+ */
+function googleSuccess() {
+  dallas = new google.maps.LatLng(32.791545, -96.786556);
+  map = new google.maps.Map($('#map')[0], {
+    center: dallas,
+    zoom: 13,
+    mapTypeControl: false,
+    panControl: false,
+    streetViewControl: false,
+    zoomControl: false
+  }); 
+  ko.applyBindings(new viewModel());
+};
+
+
 
 /* Represents a location.
  * @constructor
