@@ -69,8 +69,6 @@ function googleSuccess() {
   ko.applyBindings(new viewModel());
 };
 
-
-
 /* Represents a location.
  * @constructor
  * @param {object} name, lat, lng, text - from favoritePlaces array.
