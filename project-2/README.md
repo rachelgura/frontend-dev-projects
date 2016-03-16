@@ -1,5 +1,6 @@
 This project is an interactive resume detailing the projects I have completed, my education, work experience and places I have lived. To view this resume select the index.html file to run. In this project I was given a template which looked something like this:
 ![](http://i.imgur.com/pWU1Xbl.png)
+
 The end was result was this:
 "images/resume.png"
 
