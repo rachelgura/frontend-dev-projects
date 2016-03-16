@@ -2,7 +2,7 @@ This project is an interactive resume detailing the projects I have completed, m
 ![](http://i.imgur.com/pWU1Xbl.png)
 
 The end was result was this:
-"images/resume.png"
+![](images/resume.png)
 
 The project contains the following files:
 
