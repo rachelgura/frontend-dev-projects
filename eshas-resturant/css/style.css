@@ -3,9 +3,24 @@ body {
 }
 div {
 	height: 200px;
-	background: url("http://dash.ga.co/assets/firstcourse.jpg");
 	background-size: cover;
-	background-size: cover;
-    margin: 0 auto;
-    max-width: 600px;
+}
+.first{
+  background: url("http://dash.ga.co/assets/firstcourse.jpg");
+  margin: 0 auto;
+  max-width: 600px;
+}
+.second{
+  background: url("http://dash.ga.co/assets/secondcourse.jpg");
+  margin:0 auto;
+  max-width:600px;
+}
+.dessert{
+  background: url("http://dash.ga.co/assets/dessertcourse.jpg");
+  margin:0 auto;
+  max-width:600px;
+}
+p {
+	color: #ffffff;
+	background-color: #000000;
 }
