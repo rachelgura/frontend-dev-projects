@@ -4,6 +4,7 @@ body {
 div {
 	height: 200px;
 	background-size: cover;
+  position: relative;
 }
 .first{
   background: url("http://dash.ga.co/assets/firstcourse.jpg");
@@ -21,6 +22,14 @@ div {
   max-width:600px;
 }
 p {
-	color: #ffffff;
-	background-color: #000000;
+  padding: 10px;
+  line-height: 28px;
+  color: #ffffff;
+  text-align: justify;
+  background: #000000;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+}
+
 }
