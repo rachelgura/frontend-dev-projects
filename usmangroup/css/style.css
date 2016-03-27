@@ -1,0 +1,29 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: 1140px;
+    margin: 0 auto;
+}
+
+.services {
+    background: #fff;
+}
+.about {
+    background: #333 url(../images/bg-hero.jpg) no-repeat 50% 50%;
+    background-size: cover;
+    height: 465px;
+}
+.footer {
+    background: #15181f url(../images/bg-texture.jpg) repeat;
+    color: #fff;
+}
