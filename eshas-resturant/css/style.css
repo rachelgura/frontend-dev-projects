@@ -7,7 +7,21 @@ div {
 	height: 200px;
 	background-size: cover;
   position: relative;
+  margin: 40px 0 0 0;
+  border-radius: 12px;
 }
+
+p {
+  padding: 10px;
+  line-height: 28px;
+  color: #ffffff;
+  text-align: justify;
+  background: #000000;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+}
+
 .first{
   background: url("http://dash.ga.co/assets/firstcourse.jpg");
   margin: 0 auto;
@@ -23,14 +37,6 @@ div {
   margin:0 auto;
   max-width:600px;
 }
-p {
-  padding: 10px;
-  line-height: 28px;
-  color: #ffffff;
-  text-align: justify;
-  background: #000000;
-  position: absolute;
-  bottom: 0;
-  margin: 0;
+.price{
+  float: right;
 }
-
