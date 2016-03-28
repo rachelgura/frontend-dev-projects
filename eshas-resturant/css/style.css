@@ -1,5 +1,7 @@
 body {
   font-family: helvetica, sans-serif;
+  margin: 0 auto;
+  max-width: 600px;
 }
 div {
 	height: 200px;
@@ -32,4 +34,3 @@ p {
   margin: 0;
 }
 
-}
