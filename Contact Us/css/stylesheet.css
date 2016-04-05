@@ -47,10 +47,12 @@ textarea {
     font-size: 0.8em;
 }
 
+
 #inputs {
 	width: 200px;
 	clear: both;
 }
+
 
 #inputs input {
 	width: 100%;
