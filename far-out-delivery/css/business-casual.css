@@ -37,20 +37,13 @@ hr {
     margin: 0px 0px 50px 0px;
 }
 
-.hours{
 
-    font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-weight: 700;
-    text-align: center;
-    color: #ffffff;
-}
 
 .brand,
 .address-bar, {
     display: none;
     text-align: center;
+    padding-bottom: 0px;
 
 }
 
