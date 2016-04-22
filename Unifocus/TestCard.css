@@ -1,0 +1,127 @@
+html {
+   background-color:#dde0e5;
+   font-family: "Open Sans", Verdana, Arial, sans-serif;
+}
+
+html, body, div, span {
+   padding:0px;
+   margin:0;
+}
+
+body {
+   height:100%;
+   width:100%;
+   padding:1px;
+   box-shadow-bottom: 1px grey;
+   
+}
+
+textarea
+{
+	/*margin:10px;*/
+	width: 75%;
+	border-width:1px;
+	display:inline-block;
+	vertical-align:middle;
+	white-space:normal;
+	background:none;
+	line-height:1;
+	height:40px;
+
+	/* Browsers have different default form fonts */
+	font-size:13px;
+	font-family:Arial;
+}
+
+.request-card {
+	background-color: #fff;
+   -webkit-box-shadow: 5px 10px 15px 1px rgba(173,164,173,1);
+   -moz-box-shadow: 5px 10px 15px 1px rgba(173,164,173,1);
+    box-shadow: 5px 10px 15px 1px rgba(173,164,173,1);
+}
+
+.statusPanelGlyph{
+	font-size: 110px;
+	padding: 5px 5px 5px 5px;
+	opacity: 0.4;
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+}
+
+.request-card-status-panel{
+	background-color: #094a7b;
+	text-align: center;
+	color: white;
+	padding-bottom: 20px;
+}
+
+.statusPanelTypeText{
+	font-size: 40px;
+}
+
+.statusPanelText{
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.statusPanelDateRange{
+	font-size: 15px;
+}
+
+.x-field{
+	background-color: #fff;
+	color: #094a7b;
+	padding-top: 5px;
+	font-size: 15px;
+	font-weight: bold;
+	min-height: 20px;
+}
+
+.x-innerhtml{
+	color: grey;
+	font-size: 15px;
+	float: left;
+	text-align: left;
+	font-weight: normal;
+}
+
+.x-input-text{
+	width: 100%;
+}
+
+.x-form-label{
+	font-size: 15px;
+	float: left;
+	text-align: left;
+	min-width: 120px;
+	max-width: 130px;
+}
+
+.request-details{
+	margin-left: 25px;
+	margin-right:25px;
+}
+
+.x-field-input{
+	margin-right: 5px;
+}
+
+.x-toolbar{
+	margin: 50px 25px 20px 25px;
+	height: 80px;
+}
+
+.x-button {
+   background-color: #f7f7f5;
+   padding:15px 15px 15px 15px;
+   font-size: 15px;
+   font-weight: bold;
+   border-radius: 10px;
+   border: 2px solid red;
+   color: red;
+   text-align: center;
+}
