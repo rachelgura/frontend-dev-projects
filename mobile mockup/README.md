@@ -1,1 +1,1 @@
-A build of a mock up using CSS.
+A build of a mock up using CSS
